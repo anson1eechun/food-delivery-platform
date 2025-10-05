@@ -1,15 +1,3 @@
-# 🍔 美食外送平台 (Food Delivery Platform)
-
-一個基於 Java 11 的美食外送平台後端系統，展示完整的訂單管理流程和例外處理機制。
-
-## ✨ 功能特色
-
-- 🛒 **完整訂單生命週期管理**：從下單到配送完成的完整流程
-- 🏪 **餐廳管理**：支援餐廳接單、餐點準備等功能
-- 🚚 **外送員管理**：外送員接單、配送狀態追蹤
-- ⚠️ **健壯例外處理**：區分 Checked 和 Unchecked 例外
-- 📊 **專業日誌系統**：使用 Log4j2 進行多層級日誌記錄
-- 🧪 **完整測試情境**：7 個不同的業務場景測試
 
 ## 🏗️ 專案架構
 
@@ -48,7 +36,7 @@ food-delivery-platform/
 
 ### 編譯與執行
 
-#### 方法一：使用 Maven (推薦)
+#### 方法一：使用 Maven
 
 ```bash
 # 編譯專案
@@ -180,26 +168,3 @@ PENDING (待確認) → ACCEPTED (餐廳已接單) → PREPARING (準備中) →
 ...
 2025-10-06 07:29:14.590 [main] INFO  org.example.FoodDeliveryApp - ========== 所有測試情境執行完畢 ==========
 ```
-
-## 🤝 貢獻指南
-
-1. Fork 本專案
-2. 創建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交變更 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 開啟 Pull Request
-
-## 📄 授權條款
-
-本專案採用 MIT 授權條款 - 詳見 [LICENSE](LICENSE) 檔案
-
-## 📞 聯絡資訊
-
-如有問題或建議，請透過以下方式聯絡：
-
-- 建立 [Issue](../../issues)
-- 發送 Pull Request
-
----
-
-⭐ 如果這個專案對您有幫助，請給我們一個 Star！
