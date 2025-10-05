@@ -1,0 +1,26 @@
+2025-10-06 07:29:11.543 [main] INFO  org.example.FoodDeliveryApp - ========== 美食外送平台啟動 ==========
+2025-10-06 07:29:11.545 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 1: 正常訂單流程 ---
+2025-10-06 07:29:14.571 [main] INFO  org.example.FoodDeliveryApp - 情境 1 完成：訂單 ORD1759706951548 成功配送
+2025-10-06 07:29:14.571 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 2: 餐廳無法接單 ---
+2025-10-06 07:29:14.572 [main] WARN  org.example.FoodDeliveryApp - 餐廳 R002 無法接單: 餐廳目前無法接單
+2025-10-06 07:29:14.572 [main] INFO  org.example.FoodDeliveryApp - 系統將自動尋找其他餐廳...
+2025-10-06 07:29:14.573 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 3: 訂單參數錯誤 ---
+2025-10-06 07:29:14.586 [main] ERROR org.example.FoodDeliveryApp - 訂單建立失敗：參數驗證錯誤 - 訂單金額必須大於 0
+2025-10-06 07:29:14.586 [main] ERROR org.example.FoodDeliveryApp - 訂單建立失敗：外送地址不可為空
+2025-10-06 07:29:14.586 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 4: 訂單狀態轉換錯誤 ---
+2025-10-06 07:29:14.587 [main] WARN  org.example.FoodDeliveryApp - 狀態轉換錯誤: 訂單 ORD1759706954587 無法從 待確認 轉換到 準備中
+2025-10-06 07:29:14.587 [main] INFO  org.example.FoodDeliveryApp - 請確保依照正確的流程執行操作
+2025-10-06 07:29:14.587 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 5: 外送員不可用 ---
+2025-10-06 07:29:14.589 [main] WARN  org.example.FoodDeliveryApp - 外送員不可用: 外送員目前不可用
+2025-10-06 07:29:14.589 [main] INFO  org.example.FoodDeliveryApp - 系統將自動尋找其他外送員...
+2025-10-06 07:29:14.589 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 6: 訂單取消 ---
+2025-10-06 07:29:14.590 [main] INFO  org.example.FoodDeliveryApp - 
+--- 情境 7: 查詢不存在的訂單 ---
+2025-10-06 07:29:14.590 [main] WARN  org.example.FoodDeliveryApp - 查詢失敗: 找不到訂單: ORD_NOT_EXISTS
+2025-10-06 07:29:14.590 [main] INFO  org.example.FoodDeliveryApp - ========== 所有測試情境執行完畢 ==========

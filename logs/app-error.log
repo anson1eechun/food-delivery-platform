@@ -1,0 +1,12 @@
+2025-10-06 07:29:14.573 [main] ERROR org.example.service.DeliveryService - 建立訂單時發生參數錯誤: 訂單金額必須大於 0
+java.lang.IllegalArgumentException: 訂單金額必須大於 0
+	at org.example.service.DeliveryService.createOrder(DeliveryService.java:54) [classes/:?]
+	at org.example.FoodDeliveryApp.testInvalidOrderParameters(FoodDeliveryApp.java:123) [classes/:?]
+	at org.example.FoodDeliveryApp.main(FoodDeliveryApp.java:28) [classes/:?]
+2025-10-06 07:29:14.586 [main] ERROR org.example.FoodDeliveryApp - 訂單建立失敗：參數驗證錯誤 - 訂單金額必須大於 0
+2025-10-06 07:29:14.586 [main] ERROR org.example.service.DeliveryService - 建立訂單時發生參數錯誤: 外送地址不可為空
+java.lang.IllegalArgumentException: 外送地址不可為空
+	at org.example.service.DeliveryService.createOrder(DeliveryService.java:59) [classes/:?]
+	at org.example.FoodDeliveryApp.testInvalidOrderParameters(FoodDeliveryApp.java:137) [classes/:?]
+	at org.example.FoodDeliveryApp.main(FoodDeliveryApp.java:28) [classes/:?]
+2025-10-06 07:29:14.586 [main] ERROR org.example.FoodDeliveryApp - 訂單建立失敗：外送地址不可為空

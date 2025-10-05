@@ -1,0 +1,49 @@
+2025-10-06 07:29:11.548 [main] INFO  org.example.service.DeliveryService - 顧客 C001 正在建立訂單，餐廳: R001, 品項: 珍珠奶茶x2, 雞排便當x1, 金額: 250.0
+2025-10-06 07:29:11.551 [main] INFO  org.example.service.DeliveryService - 訂單建立成功: Order[id=ORD1759706951548, customer=C001, restaurant=R001, items=珍珠奶茶x2, 雞排便當x1, amount=250.00, status=待確認]
+2025-10-06 07:29:11.551 [main] INFO  org.example.service.DeliveryService - 餐廳 R001 嘗試接受訂單: ORD1759706951548
+2025-10-06 07:29:11.551 [main] INFO  org.example.service.DeliveryService - 餐廳 R001 成功接受訂單: Order[id=ORD1759706951548, customer=C001, restaurant=R001, items=珍珠奶茶x2, 雞排便當x1, amount=250.00, status=餐廳已接單]
+2025-10-06 07:29:12.057 [main] INFO  org.example.service.DeliveryService - 開始準備訂單: ORD1759706951548
+2025-10-06 07:29:12.057 [main] INFO  org.example.service.DeliveryService - 訂單 ORD1759706951548 進入準備狀態
+2025-10-06 07:29:13.063 [main] INFO  org.example.service.DeliveryService - 訂單餐點準備完成: ORD1759706951548
+2025-10-06 07:29:13.063 [main] INFO  org.example.service.DeliveryService - 訂單 ORD1759706951548 已完成準備，等待外送員取餐
+2025-10-06 07:29:13.064 [main] INFO  org.example.service.DeliveryService - 外送員 D001 嘗試接受訂單: ORD1759706951548
+2025-10-06 07:29:13.064 [main] INFO  org.example.service.DeliveryService - 外送員 D001 已取餐，開始配送訂單: ORD1759706951548
+2025-10-06 07:29:14.570 [main] INFO  org.example.service.DeliveryService - 嘗試完成訂單配送: ORD1759706951548
+2025-10-06 07:29:14.570 [main] DEBUG org.example.service.DeliveryService - 計算配送時間: 32.5 分鐘
+2025-10-06 07:29:14.570 [main] INFO  org.example.service.DeliveryService - 訂單 ORD1759706951548 配送完成！外送員: D001
+2025-10-06 07:29:14.571 [main] INFO  org.example.service.DeliveryService - 顧客 C002 正在建立訂單，餐廳: R002, 品項: 牛肉麵x1, 金額: 120.0
+2025-10-06 07:29:14.571 [main] INFO  org.example.service.DeliveryService - 訂單建立成功: Order[id=ORD1759706954571, customer=C002, restaurant=R002, items=牛肉麵x1, amount=120.00, status=待確認]
+2025-10-06 07:29:14.572 [main] INFO  org.example.service.DeliveryService - 餐廳 R002 嘗試接受訂單: ORD1759706954571
+2025-10-06 07:29:14.572 [main] WARN  org.example.service.DeliveryService - 餐廳 R002 目前無法接單（可能暫停營業或訂單已滿）
+2025-10-06 07:29:14.573 [main] INFO  org.example.service.DeliveryService - 顧客 C003 正在建立訂單，餐廳: R001, 品項: 炸雞套餐, 金額: -50.0
+2025-10-06 07:29:14.573 [main] ERROR org.example.service.DeliveryService - 建立訂單時發生參數錯誤: 訂單金額必須大於 0
+java.lang.IllegalArgumentException: 訂單金額必須大於 0
+	at org.example.service.DeliveryService.createOrder(DeliveryService.java:54) [classes/:?]
+	at org.example.FoodDeliveryApp.testInvalidOrderParameters(FoodDeliveryApp.java:123) [classes/:?]
+	at org.example.FoodDeliveryApp.main(FoodDeliveryApp.java:28) [classes/:?]
+2025-10-06 07:29:14.586 [main] INFO  org.example.service.DeliveryService - 顧客 C004 正在建立訂單，餐廳: R001, 品項: 披薩, 金額: 300.0
+2025-10-06 07:29:14.586 [main] ERROR org.example.service.DeliveryService - 建立訂單時發生參數錯誤: 外送地址不可為空
+java.lang.IllegalArgumentException: 外送地址不可為空
+	at org.example.service.DeliveryService.createOrder(DeliveryService.java:59) [classes/:?]
+	at org.example.FoodDeliveryApp.testInvalidOrderParameters(FoodDeliveryApp.java:137) [classes/:?]
+	at org.example.FoodDeliveryApp.main(FoodDeliveryApp.java:28) [classes/:?]
+2025-10-06 07:29:14.587 [main] INFO  org.example.service.DeliveryService - 顧客 C005 正在建立訂單，餐廳: R001, 品項: 壽司組合, 金額: 450.0
+2025-10-06 07:29:14.587 [main] INFO  org.example.service.DeliveryService - 訂單建立成功: Order[id=ORD1759706954587, customer=C005, restaurant=R001, items=壽司組合, amount=450.00, status=待確認]
+2025-10-06 07:29:14.587 [main] INFO  org.example.service.DeliveryService - 開始準備訂單: ORD1759706954587
+2025-10-06 07:29:14.587 [main] INFO  org.example.service.DeliveryService - 顧客 C006 正在建立訂單，餐廳: R003, 品項: 火鍋套餐, 金額: 680.0
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 訂單建立成功: Order[id=ORD1759706954588, customer=C006, restaurant=R003, items=火鍋套餐, amount=680.00, status=待確認]
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 餐廳 R003 嘗試接受訂單: ORD1759706954588
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 餐廳 R003 成功接受訂單: Order[id=ORD1759706954588, customer=C006, restaurant=R003, items=火鍋套餐, amount=680.00, status=餐廳已接單]
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 開始準備訂單: ORD1759706954588
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 訂單 ORD1759706954588 進入準備狀態
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 訂單餐點準備完成: ORD1759706954588
+2025-10-06 07:29:14.588 [main] INFO  org.example.service.DeliveryService - 訂單 ORD1759706954588 已完成準備，等待外送員取餐
+2025-10-06 07:29:14.589 [main] INFO  org.example.service.DeliveryService - 外送員 D003 嘗試接受訂單: ORD1759706954588
+2025-10-06 07:29:14.589 [main] WARN  org.example.service.DeliveryService - 外送員 D003 目前不可用
+2025-10-06 07:29:14.589 [main] INFO  org.example.service.DeliveryService - 顧客 C007 正在建立訂單，餐廳: R001, 品項: 漢堡套餐, 金額: 180.0
+2025-10-06 07:29:14.589 [main] INFO  org.example.service.DeliveryService - 訂單建立成功: Order[id=ORD1759706954589, customer=C007, restaurant=R001, items=漢堡套餐, amount=180.00, status=待確認]
+2025-10-06 07:29:14.589 [main] INFO  org.example.service.DeliveryService - 餐廳 R001 嘗試接受訂單: ORD1759706954589
+2025-10-06 07:29:14.590 [main] INFO  org.example.service.DeliveryService - 餐廳 R001 成功接受訂單: Order[id=ORD1759706954589, customer=C007, restaurant=R001, items=漢堡套餐, amount=180.00, status=餐廳已接單]
+2025-10-06 07:29:14.590 [main] WARN  org.example.service.DeliveryService - 收到訂單取消請求: ORD1759706954589, 原因: 顧客臨時有事，改為自取
+2025-10-06 07:29:14.590 [main] INFO  org.example.service.DeliveryService - 訂單 ORD1759706954589 已取消，原因: 顧客臨時有事，改為自取
+2025-10-06 07:29:14.590 [main] WARN  org.example.service.DeliveryService - 查詢不存在的訂單: ORD_NOT_EXISTS
